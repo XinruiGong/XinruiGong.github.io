@@ -1,102 +1,235 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <meta charset="UTF-8" />
     <title>Xinrui Gong</title>
 
-    <meta name="author" content="Xinrui Gong">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <!-- 作者与视口设置：移动端自适应必备 -->
+    <meta name="author" content="Xinrui Gong" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="images/XinruiGong.jpg" type="image/x-icon" />
+
+    <!-- 外部样式表（主要样式建议放这里，而不是写在行内 style 里） -->
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Xinrui Gong
-                </p>
-                <p>
-		TODO
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:xinrui_gong98@126.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/XinruiGong-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/XinruiGong-bio.txt">Bio</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/XinruiGong/">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/XinruiGong.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/XinruiGong.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in computer vision, deep learning, generative AI, and image processing. 
-                  Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images,
-                   usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <!--
+      外层容器：当前用 table 做整体居中与最大宽度限制。
+      现代做法可用 <main> + CSS（max-width、margin: 0 auto）替代。
+    -->
+    <table style="width:100%;max-width:800px;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
+      <tbody>
+        <tr>
+          <td style="padding:0;">
+            <!-- 个人信息区：左侧文字，右侧头像 -->
+            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
+              <tbody>
+                <tr>
+                  <!-- 左列：姓名、简介、链接 -->
+                  <td style="padding:2.5%;width:63%;vertical-align:middle;">
+                    <!-- 姓名（居中显示） -->
+                    <p class="name" style="text-align:center;">Xinrui Gong</p>
 
+                    <!-- 简介文本：目前是 TODO，后续填上你的自我介绍 -->
+                    <p><!-- TODO: 在这里写几句自我介绍，比如研究方向、当前身份等。 --></p>
 
-    <tr onmouseout="bolt3d_stop()" onmouseover="bolt3d_start()"  bgcolor="#ffffd0">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='bolt3d_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/bolt3d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+                    <!-- 常用链接：邮箱、CV、Bio、Github -->
+                    <p style="text-align:center;">
+                      <!-- 邮件链接：点击后会打开默认邮件客户端 -->
+                      <a href="mailto:xinrui_gong98@126.com">Email</a>
+                      &nbsp;/&nbsp;
+                      <!-- 下载或查看简历 PDF -->
+                      <a href="data/XinruiGong-CV.pdf" target="_blank" rel="noopener">CV</a>
+                      &nbsp;/&nbsp;
+                      <!-- 简短个人简介文本文件 -->
+                      <a href="data/XinruiGong-bio.txt" target="_blank" rel="noopener">Bio</a>
+                      &nbsp;/&nbsp;
+                      <a href="https://xinruigong.github.io" target="_blank" rel="noopener">Google Scholar</a>
+                      &nbsp;/&nbsp;
+                      <!-- Github 主页 -->
+                      <a href="https://github.com/XinruiGong/" target="_blank" rel="noopener">Github</a>
+                    </p>
+                  </td>
 
-          </video></div>
-          <img src='images/bolt3d.jpg' width="160">
-        </div>
-        <script type="text/javascript">
-          function bolt3d_start() {
-            document.getElementById('bolt3d_image').style.opacity = "1";
-          }
+                  <!-- 右列：头像（加圆角并等比裁剪） -->
+                  <td style="padding:2.5%;width:37%;max-width:37%;">
+                    <!--
+                      点击图片可查看原图；alt 文本用于无障碍（读屏）或图片加载失败时的描述。
+                      object-fit: cover 可保持居中裁切，避免拉伸变形。
+                    -->
+                    <a href="images/XinruiGong.jpg">
+                      <img
+                        src="images/XinruiGong.jpg"
+                        alt="Portrait photo of Xinrui Gong"
+                        style="width:100%;max-width:100%;object-fit:cover;border-radius:50%;"
+                        class="hoverZoomLink"
+                      />
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- =============== News（新闻动态） =============== -->
+            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle;">
+                    <div class="section-card">
+                      <h2>News</h2>
 
-          function bolt3d_stop() {
-            document.getElementById('bolt3d_image').style.opacity = "0";
-          }
-          bolt3d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-          <span class="papertitle">Motion-Refined DINOSAUR for Unsupervised Multi-Object Discovery</span>
-        <br>
-        <a href="https://xinruigong.github.io">	<strong>Xinrui Gong*</strong></a>,
-        <a href="https://olvrhhn.github.io">Oliver Hahn*</a>,
-        <a href="https://christophreich1996.github.io">Christoph Reich</a>,
-        <a href="https://kris-singh.github.io/">Krishnakant Singh</a>,
-        <a href="https://schaubsi.github.io/">Simone Schaub-Meyer</a>,
-        <a href="https://cvg.cit.tum.de/members/cremers">Daniel Cremers</a>,
-        <a href="https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp">Stefan Roth</a>,
-        <br>
-        <em>ICCVW</em>, 2025
-        <br>
-        <a href="https://github.com/XinruiGong/mr-dinosaur/tree/clear_version">project page</a>
-        /
-        <a href="https://szymanowiczs.github.io/bolt3d">arXiv</a>
-        <p></p>
-        <p>
-We present MR-DINOSAUR, a fully Unsupervised Multi-Object Discovery (MOD) method. We generate unsupervised pseudo labels by retrieving video frames without camera motion, for which we perform motion segmentation. We extend the object-centric learning model DINOSAUR using these pseudo labels to unsupervised MOD. MR-DINOSAUR achieves strong multi-object discovery results on the TRI-PD and KITTI datasets, outperforming the previous state-of-the-art despite being fully unsupervised.        </p>
-      </td>
-    </tr>
-            
-        </td>
-      </tr>
+                      <!-- 列表：每条一行，左列日期，右列内容 -->
+                      <ul class="news-list">
+                        <!-- 例：Jul 25 -->
+                        <li class="news-item">
+                          <div class="news-date">
+                            <span class="mon">Jul</span>
+                            <span class="day">25</span>
+                          </div>
+                          <div class="news-text">
+                            3 papers accepted! 
+                            <a href="#" target="_blank" rel="noopener">DFI-OmniStereo</a> at IROS, 
+                            <a href="#" target="_blank" rel="noopener">MR-DINOSAUR</a> at ICCVW, and 
+                            <a href="#" target="_blank" rel="noopener">SceneDINO</a> at ICCV.
+                          </div>
+                        </li>
+
+                      </ul>
+
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Research（研究方向）区块 -->
+            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle;">
+                    <h2>Research</h2>
+                    <p>
+                      I'm interested in computer vision, deep learning, generative AI, and image processing.
+                      Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images,
+                      usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- 论文/项目列表：此处仍用 table 做“卡片”式排版 -->
+            <table style="width:100%;border:0;border-spacing:0 10px;border-collapse:separate;margin:0 auto;">
+              <tbody>
+                <!-- 单个项目条目（高亮底色）：
+                     onmouseover/onmouseout 控制视频遮罩层的显示与隐藏，实现“悬停播放/预览”效果。
+                -->
+                <tr onmouseover="bolt3d_start()" onmouseout="bolt3d_stop()" bgcolor="#ffffd0">
+                  <!-- 左侧：缩略图/视频预览 -->
+                  <td style="padding:16px;width:20%;vertical-align:middle;">
+                    <div class="one" style="position:relative;">
+                      <!--
+                        叠层容器：下面的 img 作为静态封面，上面的 video（.two）作为悬停时显示的动态预览。
+                        通过修改透明度 opacity 实现“鼠标悬停显示视频”的效果。
+                      -->
+                      <div class="two" id="bolt3d_image" style="position:absolute;inset:0;opacity:0;transition:opacity .2s;">
+                        <video
+                          width="100%"
+                          height="100%"
+                          muted
+                          autoplay
+                          loop
+                          playsinline
+                          style="display:block;"
+                          aria-label="Project preview video"
+                        >
+                          <source src="images/bolt3d.mp4" type="video/mp4" />
+                          <!-- 兼容性提示（非常老的浏览器才可能看到） -->
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+                      <!-- 静态封面图：未悬停时显示 -->
+                      <img src="images/bolt3d.jpg" width="160" alt="Project thumbnail" style="display:block;" />
+                    </div>
+
+                    <!--
+                      简单的内联脚本：控制上面视频层的显隐。
+                      生产环境可把脚本放到独立 .js 文件里，并在底部以 <script src="..."></script> 引入。
+                    -->
+                    <script>
+                      function bolt3d_start() {
+                        document.getElementById('bolt3d_image').style.opacity = '1';
+                      }
+                      function bolt3d_stop() {
+                        document.getElementById('bolt3d_image').style.opacity = '0';
+                      }
+                      // 初始化为隐藏视频层
+                      bolt3d_stop();
+                    </script>
+                  </td>
+
+                  <!-- 右侧：标题、作者、会议信息、链接与简介 -->
+                  <td style="padding:8px;width:80%;vertical-align:middle;">
+                    <!-- 论文标题 -->
+                    <span class="papertitle">Motion-Refined DINOSAUR for Unsupervised Multi-Object Discovery</span>
+                    <br />
+
+                    <!-- 作者列表（* 通常表示共同一作） -->
+                    <a href="https://xinruigong.github.io" target="_blank" rel="noopener"><strong>Xinrui Gong*</strong></a>,
+                    <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn*</a>,
+                    <a href="https://christophreich1996.github.io" target="_blank" rel="noopener">Christoph Reich</a>,
+                    <a href="https://kris-singh.github.io/" target="_blank" rel="noopener">Krishnakant Singh</a>,
+                    <a href="https://schaubsi.github.io/" target="_blank" rel="noopener">Simone Schaub-Meyer</a>,
+                    <a href="https://cvg.cit.tum.de/members/cremers" target="_blank" rel="noopener">Daniel Cremers</a>,
+                    <a href="https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp" target="_blank" rel="noopener">Stefan Roth</a>
+                    <br />
+
+                    <!-- 会议信息与年份 -->
+                    <em>ICCVW</em>, 2025
+                    <br />
+
+                    <!-- 外部链接：项目页 / 论文（此处“arXiv”文字与实际链接不一致时可自行纠正） -->
+                    <a href="https://github.com/XinruiGong/mr-dinosaur/tree/clear_version" target="_blank" rel="noopener">project page</a>
+                    /
+                    <a href="https://szymanowiczs.github.io/bolt3d" target="_blank" rel="noopener">arXiv</a>
+
+                    <!-- 简短摘要 -->
+                    <p style="margin-top:8px;">
+                      We present MR-DINOSAUR, a fully Unsupervised Multi-Object Discovery (MOD) method. We generate unsupervised
+                      pseudo labels by retrieving video frames without camera motion, for which we perform motion segmentation.
+                      We extend the object-centric learning model DINOSAUR using these pseudo labels to unsupervised MOD.
+                      MR-DINOSAUR achieves strong multi-object discovery results on the TRI-PD and KITTI datasets,
+                      outperforming the previous state-of-the-art despite being fully unsupervised.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- /论文/项目列表结束 -->
+
+            <!-- =============== Academic Service（学术服务） =============== -->
+            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle;">
+                    <div class="section-card">
+                      <h2>Academic Service</h2>
+                      <ul class="service-list">
+                        <li>
+                          <b>Reviewer:</b>
+                          ICCV (2025, Co-Reviewed with <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn</a>)
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </body>
 </html>
