@@ -35,7 +35,11 @@
 
                     <!-- 简介文本：目前是 TODO，后续填上你的自我介绍 -->
                     <p><!-- TODO: 在这里写几句自我介绍，比如研究方向、当前身份等。 --></p>
-
+                    I am pursuing PhD opportunities in computer vision. 
+                    I received a master's degree in Computational Engineering from TU Darmstadt, with a focus on deep learning and computer vision. 
+                    At the <a href="https://www.visinf.tu-darmstadt.de/visual_inference/index.en.jsp" target="_blank" rel="noopener">Visual Inference Lab</a> I conducted research on unsupervised scene understanding advised by <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn</a> 
+                    and <a href="https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp" target="_blank" rel="noopener">Prof.Stefan Roth</a>. 
+                    Previously, I obtained a bacholer's degree in Mechanical Engineering from China University of Petroleum (East China).
                     <!-- 常用链接：邮箱、CV、Bio、Github -->
                     <p style="text-align:center;">
                       <!-- 邮件链接：点击后会打开默认邮件客户端 -->
@@ -43,9 +47,6 @@
                       &nbsp;/&nbsp;
                       <!-- 下载或查看简历 PDF -->
                       <a href="data/XinruiGong-CV.pdf" target="_blank" rel="noopener">CV</a>
-                      &nbsp;/&nbsp;
-                      <!-- 简短个人简介文本文件 -->
-                      <a href="data/XinruiGong-bio.txt" target="_blank" rel="noopener">Bio</a>
                       &nbsp;/&nbsp;
                       <a href="https://xinruigong.github.io" target="_blank" rel="noopener">Google Scholar</a>
                       &nbsp;/&nbsp;
@@ -82,18 +83,10 @@
 
                       <!-- 列表：每条一行，左列日期，右列内容 -->
                       <ul class="news-list">
-                        <!-- 例：Jul 25 -->
                         <li class="news-item">
-                          <div class="news-date">
-                            <span class="mon">Jul</span>
-                            <span class="day">25</span>
-                          </div>
-                          <div class="news-text">
-                            3 papers accepted! 
-                            <a href="#" target="_blank" rel="noopener">DFI-OmniStereo</a> at IROS, 
-                            <a href="#" target="_blank" rel="noopener">MR-DINOSAUR</a> at ICCVW, and 
-                            <a href="#" target="_blank" rel="noopener">SceneDINO</a> at ICCV.
-                          </div>
+                          <span class="date">07/2025:</span>
+                          <span class="icon" aria-hidden="true">📑</span> 
+                          <span class="text">Our paper "Motion-Refined DINOSAUR for Multi-Object Discovery" has been accepted to ICCVW 2025!</span>
                         </li>
 
                       </ul>
@@ -110,30 +103,29 @@
                   <td style="padding:16px;width:100%;vertical-align:middle;">
                     <h2>Research</h2>
                     <p>
-                      I'm interested in computer vision, deep learning, generative AI, and image processing.
-                      Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images,
-                      usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
+                      I'm interested in computer vision, deep learning. First author papers are <span class="highlight">highlighted</span>.
                     </p>
                   </td>
                 </tr>
               </tbody>
             </table>
 
+
             <!-- 论文/项目列表：此处仍用 table 做“卡片”式排版 -->
-            <table style="width:100%;border:0;border-spacing:0 10px;border-collapse:separate;margin:0 auto;">
+            <table style="width:100%;border:0;border-spacing:0 20px;border-collapse:separate;margin:0 auto;">
               <tbody>
                 <!-- 单个项目条目（高亮底色）：
                      onmouseover/onmouseout 控制视频遮罩层的显示与隐藏，实现“悬停播放/预览”效果。
                 -->
                 <tr onmouseover="bolt3d_start()" onmouseout="bolt3d_stop()" bgcolor="#ffffd0">
                   <!-- 左侧：缩略图/视频预览 -->
-                  <td style="padding:16px;width:20%;vertical-align:middle;">
+                  <td style="padding:16px 16px 0px;width:20%;vertical-align:middle;">
                     <div class="one" style="position:relative;">
                       <!--
                         叠层容器：下面的 img 作为静态封面，上面的 video（.two）作为悬停时显示的动态预览。
                         通过修改透明度 opacity 实现“鼠标悬停显示视频”的效果。
                       -->
-                      <div class="two" id="bolt3d_image" style="position:absolute;inset:0;opacity:0;transition:opacity .2s;">
+                      <div `class="two" id="bolt3d_image" style="position:absolute;inset:0;opacity:0;transition:opacity .2s;">
                         <video
                           width="100%"
                           height="100%"
@@ -151,7 +143,7 @@
                       </div>
 
                       <!-- 静态封面图：未悬停时显示 -->
-                      <img src="images/bolt3d.jpg" width="160" alt="Project thumbnail" style="display:block;" />
+                      <img src="images/mr_dinosaur.png" width="160" alt="Project thumbnail" style="display:block;" />
                     </div>
 
                     <!--
@@ -171,11 +163,10 @@
                   </td>
 
                   <!-- 右侧：标题、作者、会议信息、链接与简介 -->
-                  <td style="padding:8px;width:80%;vertical-align:middle;">
+                  <td style="padding:8px;width:80%;vertical-align:middle;line-height:1.45;">
                     <!-- 论文标题 -->
                     <span class="papertitle">Motion-Refined DINOSAUR for Unsupervised Multi-Object Discovery</span>
                     <br />
-
                     <!-- 作者列表（* 通常表示共同一作） -->
                     <a href="https://xinruigong.github.io" target="_blank" rel="noopener"><strong>Xinrui Gong*</strong></a>,
                     <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn*</a>,
@@ -187,22 +178,16 @@
                     <br />
 
                     <!-- 会议信息与年份 -->
-                    <em>ICCVW</em>, 2025
+                    <em>ICCVW</em>, 2025 (* equal contribution)
                     <br />
 
                     <!-- 外部链接：项目页 / 论文（此处“arXiv”文字与实际链接不一致时可自行纠正） -->
-                    <a href="https://github.com/XinruiGong/mr-dinosaur/tree/clear_version" target="_blank" rel="noopener">project page</a>
+                    <a href="https://szymanowiczs.github.io/bolt3d" target="_blank" rel="noopener">Paper</a>
                     /
-                    <a href="https://szymanowiczs.github.io/bolt3d" target="_blank" rel="noopener">arXiv</a>
+                    <a href="https://github.com/XinruiGong/mr-dinosaur/tree/clear_version" target="_blank" rel="noopener">Code</a>
+                    /
+                    <a href="bib/mrdinosaur.bib" target="_blank" rel="noopener">BibTeX</a>
 
-                    <!-- 简短摘要 -->
-                    <p style="margin-top:8px;">
-                      We present MR-DINOSAUR, a fully Unsupervised Multi-Object Discovery (MOD) method. We generate unsupervised
-                      pseudo labels by retrieving video frames without camera motion, for which we perform motion segmentation.
-                      We extend the object-centric learning model DINOSAUR using these pseudo labels to unsupervised MOD.
-                      MR-DINOSAUR achieves strong multi-object discovery results on the TRI-PD and KITTI datasets,
-                      outperforming the previous state-of-the-art despite being fully unsupervised.
-                    </p>
                   </td>
                 </tr>
               </tbody>
