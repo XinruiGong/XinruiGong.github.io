@@ -125,47 +125,33 @@
                 <tr onmouseover="bolt3d_start()" onmouseout="bolt3d_stop()" bgcolor="#ffffd0">
                   <!-- 左侧：缩略图/视频预览 -->
                   <td style="padding:16px 16px 0px;width:20%;vertical-align:middle;">
-                    <div class="one" style="position:relative;">
-                      <!--
-                        叠层容器：下面的 img 作为静态封面，上面的 video（.two）作为悬停时显示的动态预览。
-                        通过修改透明度 opacity 实现“鼠标悬停显示视频”的效果。
-                      -->
-                      <div `class="two" id="bolt3d_image" style="position:absolute;inset:0;opacity:0;transition:opacity .2s;">
+                    <div class="one"
+                        style="position:relative; width:160px; aspect-ratio:16/9; border-radius:0px; overflow:hidden;">
+                      <!-- 悬停时显示的视频层 -->
+                      <div class="two" id="bolt3d_image"
+                          style="position:absolute; inset:0; opacity:0; transition:opacity .2s;">
                         <video
-                          width="100%"
-                          height="100%"
-                          muted
-                          autoplay
-                          loop
-                          playsinline
-                          style="display:block;"
+                          muted autoplay loop playsinline
+                          style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"
                           aria-label="Project preview video"
-                        >
-                          <source src="images/mr_dinosaur_video.gif" type="video/mp4" />
-                          <!-- 兼容性提示（非常老的浏览器才可能看到） -->
+                          poster="images/mr_dinosaur.png">
+                          <source src="images/mr_dinosaur_video.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
 
-                      <!-- 静态封面图：未悬停时显示 -->
-                      <img src="images/mr_dinosaur.png" width="160" alt="Project thumbnail" style="display:block;" />
+                      <!-- 静态封面图（在底层，非悬停状态可见） -->
+                      <img src="images/mr_dinosaur.png" alt="Project thumbnail"
+                          style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" />
                     </div>
 
-                    <!--
-                      简单的内联脚本：控制上面视频层的显隐。
-                      生产环境可把脚本放到独立 .js 文件里，并在底部以 <script src="..."></script> 引入。
-                    -->
                     <script>
-                      function bolt3d_start() {
-                        document.getElementById('bolt3d_image').style.opacity = '1';
-                      }
-                      function bolt3d_stop() {
-                        document.getElementById('bolt3d_image').style.opacity = '0';
-                      }
-                      // 初始化为隐藏视频层
+                      function bolt3d_start()  { document.getElementById('bolt3d_image').style.opacity = '1'; }
+                      function bolt3d_stop()   { document.getElementById('bolt3d_image').style.opacity = '0'; }
                       bolt3d_stop();
                     </script>
                   </td>
+
 
                   <!-- 右侧：标题、作者、会议信息、链接与简介 -->
                   <td style="padding:8px;width:80%;vertical-align:middle;line-height:1.45;">
