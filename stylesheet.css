@@ -111,14 +111,14 @@ h2 {
 
 .one {
   width: 160px;
-  height: 130px;
+  height: 160px;
   position: relative;
 }
 
 .two {
-  width: 300px;
-  height: 500px;
-  position: relative;
+  width: 160px;
+  height: 160px;
+  position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -140,4 +140,3 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
-
