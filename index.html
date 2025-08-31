@@ -89,33 +89,26 @@
 
 
           <tr onmouseout="mrdinosaur_stop()" onmouseover="mrdinosaur_start()"  bgcolor="#ffffd0">
-                  <td style="padding:16px 16px 0px;width:20%;vertical-align:middle;">
-                    <div class="one"
-                        style="position:relative; width:160px; aspect-ratio:16/9; border-radius:0px; overflow:hidden;">
-                      <!-- 悬停时显示的视频层 -->
-                      <div class="two" id="bolt3d_image"
-                          style="position:absolute; inset:0; opacity:0; transition:opacity .2s;">
-                        <video
-                          muted autoplay loop playsinline
-                          style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"
-                          aria-label="Project preview video"
-                          poster="images/mr_dinosaur.png">
-                          <source src="images/mr_dinosaur_video.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
+            <td style="padding:16px;width:20%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='mrdinosaur_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/mrdinosaur.mp4" type="video/mp4">
+                Your browser does not support the video tag.
 
-                      <!-- 静态封面图（在底层，非悬停状态可见） -->
-                      <img src="images/mr_dinosaur.png" alt="Project thumbnail"
-                          style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" />
-                    </div>
+                </video></div>
+                <img src='images/mrdinosaur.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function mrdinosaur_start() {
+                  document.getElementById('mrdinosaur_image').style.opacity = "1";
+                }
 
-                    <script>
-                      function bolt3d_start()  { document.getElementById('bolt3d_image').style.opacity = '1'; }
-                      function bolt3d_stop()   { document.getElementById('bolt3d_image').style.opacity = '0'; }
-                      bolt3d_stop();
-                    </script>
-                  </td>
+                function mrdinosaur_stop() {
+                  document.getElementById('mrdinosaur_image').style.opacity = "0";
+                }
+                mrdinosaur_stop()
+              </script>
+            </td>
             <td style="padding:8px;width:80%;vertical-align:middle">
               <a href="https://github.com/visinf/mr-dinosaur">
                 <span class="papertitle">Motion-Refined DINOSAUR for Unsupervised Multi-Object Discovery</span>
