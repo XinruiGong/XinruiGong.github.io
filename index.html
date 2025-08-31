@@ -1,46 +1,34 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>Xinrui Gong</title>
 
-    <!-- 作者与视口设置：移动端自适应必备 -->
-    <meta name="author" content="Xinrui Gong" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- 网站图标 -->
-    <link rel="shortcut icon" href="images/XinruiGong.jpg" type="image/x-icon" />
-
-    <!-- 外部样式表（主要样式建议放这里，而不是写在行内 style 里） -->
-    <link rel="stylesheet" href="stylesheet.css" />
+    <meta name="author" content="Xinrui Gong">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/XinruiGong.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
   </head>
 
   <body>
-    <!--
-      外层容器：当前用 table 做整体居中与最大宽度限制。
-      现代做法可用 <main> + CSS（max-width、margin: 0 auto）替代。
-    -->
-    <table style="width:100%;max-width:800px;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
-      <tbody>
-        <tr>
-          <td style="padding:0;">
-            <!-- 个人信息区：左侧文字，右侧头像 -->
-            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
-              <tbody>
-                <tr>
-                  <!-- 左列：姓名、简介、链接 -->
-                  <td style="padding:2.5%;width:63%;vertical-align:middle;">
-                    <!-- 姓名（居中显示） -->
-                    <p class="name" style="text-align:center;">Xinrui Gong</p>
-
-                    <!-- 简介文本：自我介绍 -->
-                    I received a master's degree in Computational Engineering from <a href="https://www.tu-darmstadt.de/index.en.jsp" target="_blank" rel="noopener">TU Darmstadt</a>, with a focus on machine learning and deep learning. 
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Xinrui Gong
+                </p>
+                <p>
+		                I received a master's degree in Computational Engineering from <a href="https://www.tu-darmstadt.de/index.en.jsp" target="_blank" rel="noopener">TU Darmstadt</a>, with a focus on machine learning and deep learning. 
                     At the <a href="https://www.visinf.tu-darmstadt.de/visual_inference/index.en.jsp" target="_blank" rel="noopener">Visual Inference Lab</a> I conducted research on unsupervised scene understanding advised by <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn</a> 
                     and <a href="https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp" target="_blank" rel="noopener">Prof.Stefan Roth</a>. 
                     Previously, I obtained a bacholer's degree in Mechanical Engineering from the <a href="https://english.upc.edu.cn/" target="_blank" rel="noopener">China University of Petroleum (East China)</a>.
-                    <!-- 常用链接：邮箱、CV、Bio、Github -->
-                    <p style="text-align:center;">
-                      <!-- 邮件链接：点击后会打开默认邮件客户端 -->
+                </p>
+                <p style="text-align:center">
                       <a href="mailto:xinrui_gong98@126.com">Email</a>
                       &nbsp;/&nbsp;
                       <!-- 下载或查看简历 PDF -->
@@ -50,141 +38,100 @@
                       &nbsp;/&nbsp;
                       <!-- Github 主页 -->
                       <a href="https://github.com/XinruiGong/" target="_blank" rel="noopener">Github</a>
-                    </p>
-                  </td>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/XinruiGong.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/XinruiGong.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
+            <tbody>
+              <tr>
+                <td style="padding:16px;width:100%;vertical-align:middle;">
+                  <div class="section-card">
+                    <h2>News</h2>
 
-                  <!-- 右列：头像（加圆角并等比裁剪） -->
-                  <td style="padding:2.5%;width:37%;max-width:37%;">
-                    <!--
-                      点击图片可查看原图；alt 文本用于无障碍（读屏）或图片加载失败时的描述。
-                      object-fit: cover 可保持居中裁切，避免拉伸变形。
-                    -->
-                    <a href="images/XinruiGong.jpg">
-                      <img
-                        src="images/XinruiGong.jpg"
-                        alt="Portrait photo of Xinrui Gong"
-                        style="width:100%;max-width:100%;object-fit:cover;border-radius:50%;"
-                        class="hoverZoomLink"
-                      />
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- =============== News（新闻动态） =============== -->
-            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle;">
-                    <div class="section-card">
-                      <h2>News</h2>
+                    <!-- 列表：每条一行，左列日期，右列内容 -->
+                    <ul class="news-list">
+                      <li class="news-item">
+                        <span class="date">07/2025:</span>
+                        <span class="icon" aria-hidden="true">📑</span> 
+                        <span class="text">Our paper "Motion-Refined DINOSAUR for Multi-Object Discovery" has been accepted to ICCVW 2025!</span>
+                      </li>
 
-                      <!-- 列表：每条一行，左列日期，右列内容 -->
-                      <ul class="news-list">
-                        <li class="news-item">
-                          <span class="date">07/2025:</span>
-                          <span class="icon" aria-hidden="true">📑</span> 
-                          <span class="text">Our paper "Motion-Refined DINOSAUR for Multi-Object Discovery" has been accepted to ICCVW 2025!</span>
-                        </li>
+                    </ul>
+                    <ul class="news-list">
+                      <li class="news-item">
+                        <span class="date">03/2025:</span>
+                        <span class="icon" aria-hidden="true">🚀</span> 
+                        <span class="text">Graduated with honors with a Master's degree in Computational Engineering from TU Darmstadt！</span>
+                      </li>
 
-                      </ul>
-                      <ul class="news-list">
-                        <li class="news-item">
-                          <span class="date">03/2025:</span>
-                          <span class="icon" aria-hidden="true">🚀</span> 
-                          <span class="text">Graduated with honors with a Master's degree in Computational Engineering from TU Darmstadt！</span>
-                        </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- Research（研究方向）区块 -->
-            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:16px;width:100%;vertical-align:middle;">
-                    <h2>Research</h2>
-                    <p>
-                      I'm interested in computer vision and deep learning. First author papers are <span class="highlight">highlighted</span>.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                I'm interested in machine learning and deep learning. First author papers are <span class="highlight">highlighted</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-            <!-- 论文/项目列表：此处仍用 table 做“卡片”式排版 -->
-            <table style="width:100%;border:0;border-spacing:0 20px;border-collapse:separate;margin:0 auto;">
-              <tbody>
-                <!-- 单个项目条目（高亮底色）：
-                     onmouseover/onmouseout 控制视频遮罩层的显示与隐藏，实现“悬停播放/预览”效果。
-                -->
-                <tr onmouseover="bolt3d_start()" onmouseout="bolt3d_stop()" bgcolor="#ffffd0">
-                  <!-- 左侧：缩略图/视频预览 -->
-                  <td style="padding:16px 16px 0px;width:20%;vertical-align:middle;">
-                    <div class="one"
-                        style="position:relative; width:160px; aspect-ratio:16/9; border-radius:0px; overflow:hidden;">
-                      <!-- 悬停时显示的视频层 -->
-                      <div class="two" id="bolt3d_image"
-                          style="position:absolute; inset:0; opacity:0; transition:opacity .2s;">
-                        <video
-                          muted autoplay loop playsinline
-                          style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"
-                          aria-label="Project preview video"
-                          poster="images/mr_dinosaur.png">
-                          <source src="images/mr_dinosaur_video.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
+    <tr onmouseout="mrdinosaur_stop()" onmouseover="mrdinosaur_start()"  bgcolor="#ffffd0">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='mrdinosaur_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/mrdinosaur.mp4" type="video/mp4">
+          Your browser does not support the video tag.
 
-                      <!-- 静态封面图（在底层，非悬停状态可见） -->
-                      <img src="images/mr_dinosaur.png" alt="Project thumbnail"
-                          style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" />
-                    </div>
+          </video></div>
+          <img src='images/mrdinosaur.jpg' width="160">
+        </div>
+        <script type="text/javascript">
+          function mrdinosaur_start() {
+            document.getElementById('mrdinosaur_image').style.opacity = "1";
+          }
 
-                    <script>
-                      function bolt3d_start()  { document.getElementById('bolt3d_image').style.opacity = '1'; }
-                      function bolt3d_stop()   { document.getElementById('bolt3d_image').style.opacity = '0'; }
-                      bolt3d_stop();
-                    </script>
-                  </td>
-
-
-                  <!-- 右侧：标题、作者、会议信息、链接与简介 -->
-                  <td style="padding:8px;width:80%;vertical-align:middle;line-height:1.45;">
-                    <!-- 论文标题 -->
-                    <span class="papertitle">Motion-Refined DINOSAUR for Unsupervised Multi-Object Discovery</span>
-                    <br />
-                    <!-- 作者列表（* 通常表示共同一作） -->
-                    <a href="https://xinruigong.github.io" target="_blank" rel="noopener"><strong>Xinrui Gong*</strong></a>,
-                    <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn*</a>,
-                    <a href="https://christophreich1996.github.io" target="_blank" rel="noopener">Christoph Reich</a>,
-                    <a href="https://kris-singh.github.io/" target="_blank" rel="noopener">Krishnakant Singh</a>,
-                    <a href="https://schaubsi.github.io/" target="_blank" rel="noopener">Simone Schaub-Meyer</a>,
-                    <a href="https://cvg.cit.tum.de/members/cremers" target="_blank" rel="noopener">Daniel Cremers</a>,
-                    <a href="https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp" target="_blank" rel="noopener">Stefan Roth</a>
-                    <br />
-
-                    <!-- 会议信息与年份 -->
-                    <em>ICCVW</em>, 2025 (* equal contribution)
-                    <br />
-
-                    <!-- 外部链接：项目页 / 论文（此处“arXiv”文字与实际链接不一致时可自行纠正） -->
-                    <a href="https://xinruigong.github.io" target="_blank" rel="noopener">Paper</a>
-                    /
-                    <a href="https://github.com/visinf/mr-dinosaur" target="_blank" rel="noopener">Code</a>
-                    /
-                    <a href="bib/mrdinosaur.bib" target="_blank" rel="noopener">BibTeX</a>
-
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- /论文/项目列表结束 -->
-
+          function mrdinosaur_stop() {
+            document.getElementById('mrdinosaur_image').style.opacity = "0";
+          }
+          mrdinosaur_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://github.com/visinf/mr-dinosaur">
+          <span class="papertitle">Motion-Refined DINOSAUR for Unsupervised Multi-Object Discovery</span>
+        </a>
+            <br />
+            <a href="https://xinruigong.github.io" target="_blank" rel="noopener"><strong>Xinrui Gong*</strong></a>,
+            <a href="https://olvrhhn.github.io" target="_blank" rel="noopener">Oliver Hahn*</a>,
+            <a href="https://christophreich1996.github.io" target="_blank" rel="noopener">Christoph Reich</a>,
+            <a href="https://kris-singh.github.io/" target="_blank" rel="noopener">Krishnakant Singh</a>,
+            <a href="https://schaubsi.github.io/" target="_blank" rel="noopener">Simone Schaub-Meyer</a>,
+            <a href="https://cvg.cit.tum.de/members/cremers" target="_blank" rel="noopener">Daniel Cremers</a>,
+            <a href="https://www.visinf.tu-darmstadt.de/visual_inference/people_vi/stefan_roth.en.jsp" target="_blank" rel="noopener">Stefan Roth</a>
+            <br />
+            <em>ICCVW</em>, 2025 (* equal contribution)
+            <br>
+            <a href="https://xinruigong.github.io" target="_blank" rel="noopener">Paper</a>
+            /
+            <a href="https://github.com/visinf/mr-dinosaur" target="_blank" rel="noopener">Code</a>
+            /
+            <a href="bib/mrdinosaur.bib" target="_blank" rel="noopener">BibTeX</a>
+      </td>
+    </tr>
+          </tbody></table>
             <!-- =============== Academic Service（学术服务） =============== -->
             <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
               <tbody>
@@ -203,10 +150,6 @@
                 </tr>
               </tbody>
             </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
     <footer class="site-footer" role="contentinfo">
       <div class="footer-inner" style="max-width:800px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;text-align:center;">
         <span>Design / source code from
@@ -221,5 +164,8 @@
         <span>&copy;  Xinrui Gong 2025</span>
       </div>
     </footer>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
